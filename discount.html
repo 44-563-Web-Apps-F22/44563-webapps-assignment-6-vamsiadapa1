@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+ <head>
+    <title>Calculation of the Discount</title>
+ </head>
+<body>
+
+<h2>Vamsi Krishna Adapa Computes Discounts </h2>
+<h2>Getting Input</h2>
+
+<form>
+    <label for="form1_age">Enter product base amount </label>
+    <input type ="number" id="form1_age" name="form1_age" min=10 max=50 step=2 value=20> <br><br>
+
+    <label for="form1_nick">Enter discount percentage applies </label>
+    <input type ="number" id="form1_nick" name="form1_nick" value = 10 autofocus> <br><br>
+
+    <input type="button" class="btn btn-primary" onclick="discount()" value="Apply discount ">
+</form>
+<p id="result1">This Text will be replaced </p>
+<script> 
+
+    function discount(){
+        let result=""
+        console.log("Getting form values")
+        base = document.getElementById("form1_age").value
+        discountPercentage = document.getElementById("form1_nick").value
+        for(let i=1;i<6;i++)
+        {
+            result=result+((i*base)-(i*base)*discountPercentage/100)+" "
+        }
+    
+        out = document.getElementById("result1")
+        out.innerHTML = "Discounted amounts for "+base+" value are: "+result
+    }
+    </script>
+
+
+<form  >
+    <input type="radio" id="rg1_red" name="color" value="times"  onclick="chooseOp()" checked >
+    <label for="rg1_red">*</label></br>
+  
+    <input type="radio" id="rg1_blue" name="color" onclick="chooseOp()" value="divide">
+    <label for="rg1_blue">/</label></br>
+  
+    <input type="radio" id="rg1_green" name="color"  onclick="chooseOp()" value="exponent">
+    <label for="rg1_green">**</label></br>
+
+     
+  </form>
+
+<p id="result">This Text will be replaced </p>
+
+
+<script>
+function chooseOp(){
+    
+    base = document.getElementById("form1_age").value
+    discountPercentage = document.getElementById("form1_nick").value
+    redOpt = document.getElementById("rg1_red").checked
+    blueOpt = document.getElementById("rg1_blue").checked
+    greenOpt = document.getElementById("rg1_green").checked
+    out = document.getElementById("result")
+    if(redOpt==true)
+    out.innerHTML = base*discountPercentage
+    if(blueOpt==true)
+    out.innerHTML = base/discountPercentage
+     if(greenOpt==true)
+    out.innerHTML = base**discountPercentage
+}
+</script>
+
+
+
+</body>
+</html>
