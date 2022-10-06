@@ -2,20 +2,27 @@
 <html>
  <head>
     <title>Calculation of the Discount</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"   
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script> 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" 
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
+
  </head>
 <body>
-
+    <div class="container p-1 my-1 bg-secondary text-white">
 <h2>Vamsi Krishna Adapa Computes Discounts </h2>
-<h2>Getting Input</h2>
+<h2>Getting Input</h2></div>
 
-<form>
+<form class="form-group">
     <label for="form1_age">Enter product base amount </label>
     <input type ="number" id="form1_age" name="form1_age" min=10 max=50 step=2 value=20> <br><br>
 
     <label for="form1_nick">Enter discount percentage applies </label>
     <input type ="number" id="form1_nick" name="form1_nick" value = 10 autofocus> <br><br>
 
-    <input type="button" class="btn btn-primary" onclick="discount()" value="Apply discount ">
+    <input type="button" class="btn btn-success" onclick="discount()" value="Apply discount ">
 </form>
 <p id="result1">This Text will be replaced </p>
 <script> 
